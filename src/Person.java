@@ -1,9 +1,12 @@
-public class Person implements Nameable {
+
+
+ public class Person implements Nameable {
     int id;
     String name;
     int age;
+    boolean parentPermission=true;
 
-    public Person(int id, int age, boolean parentPermission, String name) {
+    public Person(int id, int age, String name) {
         this.id = id;
         this.name = name;
         this.age = age;
@@ -30,7 +33,7 @@ public class Person implements Nameable {
     }
 
     private boolean isOfAge() {
-        return age >= 16;
+        return age >= 18;
     }
 
     public boolean canUseServices() {
@@ -40,5 +43,10 @@ public class Person implements Nameable {
     @Override
     public String getCorrectName() {
         return name;
+    }
+
+    public Rental rentBook(Book book, String date) {
+        Rental rental = new Rental(date, book, this);
+        return rental;
     }
 }
