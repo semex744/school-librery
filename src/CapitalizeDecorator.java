@@ -1,4 +1,4 @@
-public class CapitalizeDecorator extends git BaseDecorator {
+public class CapitalizeDecorator extends  Decorator {
     public CapitalizeDecorator(Nameable nameable) {
         super(nameable);
     }
