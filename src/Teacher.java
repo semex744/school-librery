@@ -1,8 +1,8 @@
- public class Teacher extends Person {
+public class Teacher extends Person {
     private String specialization;
 
-    public Teacher(int id, int age, String specialization, boolean parentPermission, String name) {
-        super(id, age, name);
+    public Teacher( String name,int age,boolean parentPermission,String specialization) {
+        super( name,age,parentPermission);
         this.specialization = specialization;
     }
 

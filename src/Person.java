@@ -1,15 +1,16 @@
 
 
- public class Person implements Nameable {
+public class Person implements Nameable {
     int id;
     String name;
     int age;
     boolean parentPermission=true;
 
-    public Person(int id, int age, String name) {
+    public Person(String name,int age,boolean parentPermission) {
         this.id = id;
         this.name = name;
         this.age = age;
+        this.parentPermission=parentPermission;
     }
 
     public int getId() {
@@ -46,7 +47,7 @@
     }
 
     public Rental rentBook(Book book, String date) {
-        Rental rental = new Rental(date, book, this);
+        Rental rental = new Rental( book, this);
         return rental;
     }
 }

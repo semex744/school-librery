@@ -1,5 +1,5 @@
- import java.util.ArrayList;
- import java.util.List;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Classroom {
     private String label;
@@ -23,7 +23,7 @@ public class Classroom {
     }
 
     public void addStudent(Student student) {
-        student.setClassroom(this.getLabel());
+        student.setClassroom(this);
         students.add(student);
     }
 }
